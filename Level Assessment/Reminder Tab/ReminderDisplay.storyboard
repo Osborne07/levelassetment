@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y6W-OH-hqX">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Reminder Disp Vc-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController storyboardIdentifier="ReminderDispVc" id="Y6W-OH-hqX" customClass="ReminderDispVc" customModule="Level_Assessment" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="PQS-VX-3qs">
+                                <rect key="frame" x="10" y="109" width="373" height="209"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Title" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pbS-mZ-Ucd">
+                                        <rect key="frame" x="0.0" y="0.0" width="373" height="84.666666666666671"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Body..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gsu-wc-Xlo">
+                                        <rect key="frame" x="0.0" y="124.66666666666666" width="373" height="84.333333333333343"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                </subviews>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TV5-8x-OO0">
+                                <rect key="frame" x="40" y="358" width="313" height="44"/>
+                                <color key="backgroundColor" red="0.96841150522232056" green="0.86388637514696676" blue="0.62989592994624077" alpha="0.94502793874172186" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="tintColor" systemColor="labelColor"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Save"/>
+                                <connections>
+                                    <action selector="saveTapped:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="I5B-Fh-d8B"/>
+                                </connections>
+                            </button>
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" style="wheels" translatesAutoresizingMaskIntoConstraints="NO" id="75j-cf-fXm">
+                                <rect key="frame" x="0.0" y="502" width="393" height="216"/>
+                            </datePicker>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="PQS-VX-3qs" secondAttribute="trailing" constant="10" id="4hx-Pc-6xe"/>
+                            <constraint firstItem="TV5-8x-OO0" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="40" id="4kB-Gj-FQq"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="TV5-8x-OO0" secondAttribute="trailing" constant="40" id="Am9-Rx-eGr"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="PQS-VX-3qs" secondAttribute="bottom" constant="500" id="UTz-Ol-djW"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="75j-cf-fXm" secondAttribute="bottom" constant="100" id="Vge-sI-XH9"/>
+                            <constraint firstItem="75j-cf-fXm" firstAttribute="leading" secondItem="5EZ-qb-Rvc" secondAttribute="leading" id="WPU-St-fLG"/>
+                            <constraint firstItem="PQS-VX-3qs" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="10" id="cVU-SP-vmm"/>
+                            <constraint firstAttribute="trailing" secondItem="75j-cf-fXm" secondAttribute="trailing" id="psc-eK-7BZ"/>
+                            <constraint firstItem="75j-cf-fXm" firstAttribute="top" secondItem="TV5-8x-OO0" secondAttribute="bottom" constant="100" id="sq4-7f-92K"/>
+                            <constraint firstItem="TV5-8x-OO0" firstAttribute="top" secondItem="PQS-VX-3qs" secondAttribute="bottom" constant="40" id="tvO-d7-lOT"/>
+                            <constraint firstItem="PQS-VX-3qs" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="50" id="xMT-hl-btY"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="BodyTextField" destination="gsu-wc-Xlo" id="NfC-aO-bbe"/>
+                        <outlet property="TitleFiels" destination="pbS-mZ-Ucd" id="AQI-Uy-AUk"/>
+                        <outlet property="datePicker" destination="75j-cf-fXm" id="i95-Fb-QFs"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="46.564885496183201" y="-2.1126760563380285"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

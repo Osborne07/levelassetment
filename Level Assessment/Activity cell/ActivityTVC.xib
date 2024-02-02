@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ActivityTVC" rowHeight="265" id="KGk-i7-Jjw" customClass="ActivityTVC" customModule="Level_Assessment" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="532" height="265"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="532" height="265"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IiU-PA-ksI">
+                        <rect key="frame" x="0.0" y="0.0" width="212.33333333333334" height="60"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Activity Routine" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ghg-NQ-rj7">
+                                <rect key="frame" x="20" y="0.0" width="192.33333333333334" height="60"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="26"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="ghg-NQ-rj7" firstAttribute="leading" secondItem="IiU-PA-ksI" secondAttribute="leading" constant="20" id="Cch-62-XV1"/>
+                            <constraint firstItem="ghg-NQ-rj7" firstAttribute="top" secondItem="IiU-PA-ksI" secondAttribute="top" id="JDd-hp-tgz"/>
+                            <constraint firstAttribute="trailing" secondItem="ghg-NQ-rj7" secondAttribute="trailing" id="X74-uy-r0c"/>
+                            <constraint firstAttribute="height" constant="60" id="ZVP-9H-IBZ"/>
+                            <constraint firstAttribute="bottom" secondItem="ghg-NQ-rj7" secondAttribute="bottom" id="dkh-c5-keG"/>
+                        </constraints>
+                    </view>
+                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="SSa-H6-NbM">
+                        <rect key="frame" x="0.0" y="60" width="532" height="205"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="D2D-9P-qmj">
+                            <size key="itemSize" width="128" height="128"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                    </collectionView>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="IiU-PA-ksI" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="6ga-Fn-tsh"/>
+                    <constraint firstAttribute="bottom" secondItem="SSa-H6-NbM" secondAttribute="bottom" id="JPH-lP-nT4"/>
+                    <constraint firstItem="SSa-H6-NbM" firstAttribute="top" secondItem="IiU-PA-ksI" secondAttribute="bottom" id="LPE-JZ-YOm"/>
+                    <constraint firstItem="SSa-H6-NbM" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="Pkd-HA-shU"/>
+                    <constraint firstItem="IiU-PA-ksI" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="Rgi-MX-Dds"/>
+                    <constraint firstAttribute="trailing" secondItem="SSa-H6-NbM" secondAttribute="trailing" id="eQu-sQ-xxc"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="collectionView" destination="SSa-H6-NbM" id="y3t-cc-AHT"/>
+            </connections>
+            <point key="canvasLocation" x="177.09923664122135" y="76.408450704225359"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
